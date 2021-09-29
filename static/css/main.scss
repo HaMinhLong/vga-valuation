@@ -91,6 +91,7 @@ li {
   color: $blue;
   font-weight: 700;
   font-size: 64px;
+  line-height: 70px;
 }
 .short-description {
   overflow: hidden;
@@ -214,12 +215,17 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
-      > a {
-        text-decoration: none;
-        font-weight: 500;
+      img {
+        display: none;
       }
-      > a:hover {
-        color: $blue3;
+      div {
+        > a {
+          text-decoration: none;
+          font-weight: 500;
+        }
+        > a:hover {
+          color: $blue3;
+        }
       }
       &:nth-child(1) {
         margin-left: 0px;
@@ -237,7 +243,9 @@ header {
           list-style: none;
           border-top: 1px solid $blue;
           padding: 15px 30px;
-
+          img {
+            display: none;
+          }
           a {
             text-decoration: none;
             font-weight: 500;
@@ -256,10 +264,13 @@ header {
       }
     }
     > li.active {
-      a {
+      > a {
         color: $blue3;
       }
     }
+  }
+  .nav {
+    display: none;
   }
 }
 .banner-home {
@@ -308,6 +319,9 @@ header {
 }
 .introduce-home {
   margin-top: 64px;
+  .box-title-type-1 {
+    margin-bottom: 36px !important;
+  }
   .left-side {
     .image-box {
       height: 410px;
@@ -361,6 +375,7 @@ header {
       border-radius: 23px;
       .short-description {
         height: 216px;
+        text-align: justify;
       }
     }
   }
@@ -423,6 +438,8 @@ header {
       height: 53px;
       p,
       a {
+        display: inline-block;
+        width: 100%;
         color: #fff;
         text-align: center;
         line-height: 18px;
@@ -446,6 +463,9 @@ header {
   margin-top: 64px;
   padding: 15px 0px;
   height: 910px;
+  .why-details {
+    display: none;
+  }
   .background {
     position: absolute;
     top: 0;
@@ -481,7 +501,10 @@ header {
           margin-top: 6px;
           text-align: justify;
         }
-        img {
+        .to-bottom {
+          display: none;
+        }
+        .line {
           position: absolute;
           width: 5.5px;
         }
@@ -494,7 +517,7 @@ header {
           .short-description {
             height: 145px;
           }
-          img {
+          .line {
             top: 0;
             right: -15px;
           }
@@ -505,7 +528,7 @@ header {
           .short-description {
             height: 145px;
           }
-          img {
+          .line {
             top: 0;
             left: -15px;
           }
@@ -519,7 +542,7 @@ header {
           .short-description {
             height: 154px;
           }
-          img {
+          .line {
             top: -60px;
             right: -15px;
           }
@@ -530,7 +553,7 @@ header {
           .short-description {
             height: 324px;
           }
-          img {
+          .line {
             top: -80px;
             left: -15px;
           }
@@ -644,7 +667,7 @@ header {
   }
 }
 footer {
-  padding: 64px 54px;
+  padding: 64px 0px 54px;
   background: linear-gradient(90deg, #fff 20%, #abe7f7);
   .company {
     padding-right: 30px;
@@ -709,10 +732,12 @@ footer {
   }
 }
 .introduce-page {
+  overflow: hidden !important;
   .introduce-part-one,
   .introduce-part-two,
   .introduce-part-three {
     margin-bottom: 64px;
+    overflow: hidden !important;
   }
   .introduce-part-one {
     position: relative;
@@ -737,6 +762,9 @@ footer {
             #9536b3 37.61%,
             #7d37b4 116.66%
           );
+          img {
+            display: none;
+          }
         }
         .short-description {
           margin-top: 10px;
@@ -867,6 +895,9 @@ footer {
             color: $blueTitle;
             font-weight: 500;
             text-align: center;
+            img {
+              display: none;
+            }
           }
           .short-description {
             margin-top: 11px;
@@ -885,11 +916,11 @@ footer {
             bottom: 200px;
             left: 280px;
           }
-          &:nth-child(4) {
+          &:nth-child(5) {
             bottom: -50px;
             left: 650px;
           }
-          &:nth-child(5) {
+          &:nth-child(4) {
             bottom: 200px;
             right: 280px;
           }
@@ -910,7 +941,11 @@ footer {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        z-index: -1;
       }
+    }
+    .operation-details {
+      display: none;
     }
   }
   .introduce-part-three {
@@ -920,6 +955,9 @@ footer {
       position: relative;
       left: 50%;
       transform: translateX(-50%);
+    }
+    .diagram-company-mobile {
+      display: none;
     }
   }
 }
@@ -937,7 +975,7 @@ footer {
     margin: 0 auto;
     margin-top: 16px;
     margin-bottom: 64px;
-    padding: 23px 51px 42px;
+    padding: 23px 51px 0px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
